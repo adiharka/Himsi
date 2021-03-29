@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&family=Poppins:wght@500;600;700&display=swap"
+        rel="stylesheet">
+    <title>Form</title>
+</head>
+
+<body>
+    <h2>Form</h2>
+    <form action="/form-end.html">
+        <!-- Judul Form -->
+        <h4 class="form-header">(Judul) Pendaftaran Kepengurusan HIMSI 2021</h4>
+        <!-- pilihan alert = info; primary; success; danger -->
+        <div class='alert alert-danger-form'>(alert sunnah) Mohon isi Kolom Wajib</div>
+
+        <!-- Isi Form -->
+        <div class="form-group">
+            <p>(Deskripsi) HIMSI adalah lorem ipsum Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugiat
+                magnam illum, doloribus esse placeat fuga laboriosam deleniti id nemo molestias.
+            </p>
+        </div>
+        <div class="form-group">
+            <label for="exampleFormInput1">(variasi border merah) Nama*</label>
+            <input type="text" class="form-control is-invalid" id="exampleFormInput1" placeholder="Muhammad Snapdragon">
+        </div>
+        <div class="form-group">
+            <label for="exampleFormControlInput1">Email address*</label>
+            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+        </div>
+        <div class="form-group">
+            <label for="exampleInputPassword1">Password</label>
+            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+        </div>
+        <div class="form-group">
+            <label for="exampleFormControlSelect1">Example select</label>
+            <select class="form-control" id="exampleFormControlSelect1">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="exampleFormCheck">Example Checkbox</label>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                <label class="form-check-label" for="defaultCheck1">
+                    Default checkbox
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="defaultCheck2" disabled>
+                <label class="form-check-label" for="defaultCheck2">
+                    Disabled checkbox
+                </label>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="exampleFormControlTextarea1">Example textarea</label>
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+        </div>
+        <div class="form-group">
+            <label for="exampleFormControlFile1">Example file input</label>
+            <input type="file" class="form-control-file" id="file">
+            <!-- Biar tombolnya cakep pake label dgn class form-control-file-button -->
+            <script src="script.js"></script>
+            <label for="file" class="form-control-file-button" data-multiple-caption="{count} files selected"
+                multiple>Upload<img src="img/upload.svg" alt=""></label>
+        </div>
+        </div>
+        <!-- Akhir isi form -->
+
+        <!-- Submit Button -->
+        <div class="form-group submit">
+            <button type="submit" class="btn btn-primary">Submit<img src="img/send.svg" alt=""></button>
+            <!-- </div> -->
+    </form>
+</body>
+
+</html>

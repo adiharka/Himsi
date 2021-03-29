@@ -1,0 +1,2 @@
+Kurang lebih udh jadi, cuma bagian upload form masih belum sempurna (JS belom jadi, makanya pas user ngupload tulisannya tetep upload walaupun sukste)
+Cuma butuh CSS, file js gausa ikut gpp soale dipakenya buat upload doang.
