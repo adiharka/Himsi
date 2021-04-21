@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Edit</title>
+
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&family=Poppins:wght@500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Style -->
+    <link rel="stylesheet" href="env.css">
+    <link rel="stylesheet" href="navtop.css">
+    <link rel="stylesheet" href="form-edit.css">
+
+</head>
+
+<body>
+    <div class="nav">
+        <div class="nav-mobile">
+            <img src="img/btn-burger.png" alt="" class="nav-burger">
+        </div>
+        <div class="nav-group">
+            <a href="#" class="nav-item active">
+                <span class="nav-text"> Beranda </span>
+                <span class="line"></span>
+            </a>
+            <a href="#" class="nav-item">
+                <span class="nav-text">Profil</span>
+                <span class="line"></span>
+            </a>
+            <a href="#" class="nav-item">
+                <span class="nav-text">CHSI</span>
+                <span class="line"></span>
+            </a>
+            <div class="dropdown nav-item">
+                <button class="dropbtn">Dropdown<img src="img/drop-down.png" /></button>
+                <div class="dropdown-content">
+                    <a href="#">Link 1</a>
+                    <a href="#">Link 2</a>
+                    <a href="#">Link 3</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+    <div class="content">
+        <h3>Form Details - Edit Form</h3>
+
+        <div class="detail-form">
+            <div class="info">
+                <span class="p"><strong>Judul :</strong> Form Pendaftaran Kepanitiaan</span>
+                <span class="p"><strong>Pemilik :</strong> example@exapmle.com</span>
+                <span class="p"><strong>Deadline :</strong> 24/5/2021 19:30 WIB</span>
+            </div>
+            <a href="#" class="btn-edit"> <img src="img/setting.svg" alt=""> Ubah</a>
+        </div>
+
+        <div class="detail-form" id="short-link">
+            <div class="info">
+                <span class="p"><strong>Short-Link :</strong> himsiunair.com/f/daftarKepanitiaan</span>
+            </div>
+            <a href="#" class="btn-edit"> <img src="img/setting.svg" alt=""> Ubah</a>
+        </div>
+
+        <div class="detail-form" id="excel">
+            <img src="img/excel-ico.svg" alt="" id="ico-excel">
+             <span> Unduh data dalam bentuk Excel </span> 
+             <img src="img/download-ico.svg" alt="" id="ico-download">
+        </div>
+
+        <div class="divider-cover">
+            <hr class="divider">
+        </div>
+
+        <div class="opsi">
+            <span class="p" data-target=".table-jawaban" data-sembunyi=".list-pertanyaan">Tabel jawaban</span>
+            <span class="p active" data-target=".list-pertanyaan" data-sembunyi=".table-jawaban">List Pertanyaan</span>
+        </div>
+
+        <div class="list-pertanyaan">
+            <div class="button-group">
+                <button class="p btn-blue">Tambah Pertayaan</button>
+                <button class="p btn-red">Kunci Seluruh Pertanyaan</button>
+                <button class="p btn-green">Urutkan Pertanyaan</button>
+            </div>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Tipe</th>
+                        <th>Pertanyaan</th>
+                        <th>Wajib</th>
+                        <th>Aksi</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th>1</th>
+                        <td>text</td>
+                        <td>Namamu</td>
+                        <td>Ya</td>
+                        <td class="aksi">
+                            <a href="#" class="edit">Edit</a>
+                            <a href="#" class="delete">Delete</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>1</th>
+                        <td>text</td>
+                        <td>Namamu</td>
+                        <td>Ya</td>
+                        <td class="aksi">
+                            <a href="#" class="edit">Edit</a>
+                            <a href="#" class="delete">Delete</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>1</th>
+                        <td>text</td>
+                        <td>Namamu</td>
+                        <td>Ya</td>
+                        <td class="aksi">
+                            <a href="#" class="edit">Edit</a>
+                            <a href="#" class="delete">Delete</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="table-jawaban">
+            <h3>nih table jawaban nyusul Ya</h3>
+        </div>
+
+        <div class="mobile-message p">
+            Fitur daftar pertanyaan dan daftar jawaban
+            <br>
+            Tidak tersedia dalam tampilan mobile
+        </div>
+    </div>
+
+    <script src="form-edit.js"></script>
+    <script src="navtop.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&family=Poppins:wght@500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Style -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="navtop.css">
+    <link rel="stylesheet" href="form-client.css">
+</head>
+
+<body>
+
+    <div class="nav">
+        <div class="nav-mobile">
+            <img src="img/btn-burger.png" alt="" class="nav-burger">
+        </div>
+        <div class="nav-group">
+            <a href="#" class="nav-item active">
+                <span class="nav-text"> Beranda </span>
+                <span class="line"></span>
+            </a>
+            <a href="#" class="nav-item">
+                <span class="nav-text">Profil</span>
+                <span class="line"></span>
+            </a>
+            <a href="#" class="nav-item">
+                <span class="nav-text">CHSI</span>
+                <span class="line"></span>
+            </a>
+            <div class="dropdown nav-item">
+                <button class="dropbtn">Dropdown<img src="img/drop-down.png" /></button>
+                <div class="dropdown-content">
+                    <a href="#">Link 1</a>
+                    <a href="#">Link 2</a>
+                    <a href="#">Link 3</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="content">
+
+        <section class="mengisi">
+            <h3>Mengisi Form</h3>
+            <div class="form-group">
+                <label for="inputToken">himsiunair.com/f/</label>
+                <input type="text" class="form-control" id="inputToken" placeholder="pendaftaranPanitia">
+                <button type="submit" class="btn btn-primary">isi FORM<img src="img/send.svg" alt=""></button>
+            </div>
+        </section>
+
+        <hr class="divider">
+
+        <section class="membuat">
+            <div class="info">
+                <img src="img/Blob.svg" alt="">
+                <span class="h3">Cara Membuat Form</span>
+                <div class="desc">
+                    <span class="p">1 Masukkan email anda pada kolom <strong>‘buat form’</strong></span>
+                    <span class="p">2 Sistem akan mengirimi anda sebuah email berisi token hak akses form</span>
+                    <span class="p">3 Masukkan token tersebut ke dalam kolom <strong>‘edit form’</strong></span>
+                    <span class="p">4 Anda akan menuju halaman edit form, dan disana anda dapat mengubah-ubah rincian
+                        form seperti
+                        yang
+                        anda inginkan</span>
+                </div>
+            </div>
+            <div class="field">
+                <div class="form-group">
+                    <h3>Membuat Form</h3>
+                    <label for="inputEmail">Email</label>
+                    <div class="form-field">
+                        <input type="email" class="form-control" id="inputEmail" placeholder="example@example.com">
+                        <button type="submit" class="btn btn-primary">buat FORM<img src="img/send.svg" alt=""></button>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <h3>Edit Form</h3>
+                    <label for="inputFormToken">Token</label>
+                    <div class="form-field">
+                        <input type="text" class="form-control" id="inputFormToken" placeholder="contoh : 112qwue787s">
+                        <button type="submit" class="btn btn-primary">edit FORM<img src="img/send.svg" alt=""></button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <hr class="divider">
+
+        <section class="preview">
+            <h3>Preview Edit Form</h3>
+            <img src="img/preview-form.png" alt="">
+        </section>
+
+    </div>
+
+
+    <script src="navtop.js"></script>
+
+</body>
+
+</html>

@@ -37,6 +37,17 @@ h2 {
     color: var(--daintree);
 }
 
+.h3,
+h3 {
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 34px;
+    line-height: 51px;
+
+    color: var(--daintree);
+}
+
 .h4,
 h4 {
     font-family: Poppins;
@@ -327,7 +338,7 @@ p {
     bottom: 0;
     border-radius: 5px;
     background: linear-gradient(90deg, #219EBC 0%, #002748 100%);
-    
+
 
     -webkit-transform: scaleX(0);
     transform: scaleX(0);
@@ -373,7 +384,7 @@ p {
 .btn-primary:active {
     background-color: var(--daintree);
     color: var(--polar);
-} 
+}
 
 .submit {
     display: flexbox;
