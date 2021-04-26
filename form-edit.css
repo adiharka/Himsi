@@ -26,7 +26,9 @@
     color: var(--polar);
     border: none;
     padding: 10px 20px;
+    cursor: pointer;
 }
+
 
 .detail-form#excel:hover {
     background-color: #106937;
@@ -39,6 +41,19 @@
 .detail-form#excel img#ico-download {
     width: 15px;
     align-self: center;
+}
+
+.detail-form#delete {
+    background-color:#fb2100b7;
+    justify-content: center;
+    color: var(--polar);
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.detail-form#delete:hover {
+    background-color:#fb2100;
 }
 
 .detail-form .info {
@@ -164,6 +179,7 @@ hr.divider {
 
 .list-pertanyaan .button-group button.btn-red {
     background-color: var(--danger);
+    color: var(--polar);
 }
 
 .list-pertanyaan .button-group button.btn-green {

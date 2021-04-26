@@ -15,6 +15,7 @@
 
     <!-- Style -->
     <link rel="stylesheet" href="env.css">
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="navtop.css">
     <link rel="stylesheet" href="form-edit.css">
 
@@ -56,24 +57,37 @@
 
         <div class="detail-form">
             <div class="info">
-                <span class="p"><strong>Judul :</strong> Form Pendaftaran Kepanitiaan</span>
-                <span class="p"><strong>Pemilik :</strong> example@exapmle.com</span>
-                <span class="p"><strong>Deadline :</strong> 24/5/2021 19:30 WIB</span>
+                <span class="p"><strong>Judul : </strong>Form Pendaftaran Kepanitiaan</span>
+                <span class="p"><strong>Pemilik : </strong>example@exapmle.com</span>
+                <span class="p"><strong>Deadline : </strong>24/5/2021 19:30 WIB</span>
+                <span class="p"><strong>Deskripsi : </strong>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Ex,
+                    facilis. Quasi sed laboriosam magni assumenda voluptatem blanditiis, suscipit repellendus.
+                    Ipsum.</span>
+                <span class="p"><strong>Afterform : </strong>Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                    Mollitia quas eum expedita, ipsa beatae similique accusantium eius vitae rerum sed.</span>
+                <span class="p"><strong>Afterform-link : </strong>line.com/masukgroup</span>
             </div>
-            <a href="#" class="btn-edit"> <img src="img/setting.svg" alt=""> Ubah</a>
+            <a href="#" class="btn-edit btn-modal-trigger" data-modal="#modal-identity"> <img src="img/setting.svg"
+                    alt=""> Ubah</a>
         </div>
 
         <div class="detail-form" id="short-link">
             <div class="info">
                 <span class="p"><strong>Short-Link :</strong> himsiunair.com/f/daftarKepanitiaan</span>
             </div>
-            <a href="#" class="btn-edit"> <img src="img/setting.svg" alt=""> Ubah</a>
+            <a href="#" class="btn-edit btn-modal-trigger" data-modal="#modal-shortlink"> <img src="img/setting.svg"
+                    alt=""> Ubah</a>
         </div>
 
         <div class="detail-form" id="excel">
             <img src="img/excel-ico.svg" alt="" id="ico-excel">
-             <span> Unduh data dalam bentuk Excel </span> 
-             <img src="img/download-ico.svg" alt="" id="ico-download">
+            <span> Unduh data dalam bentuk Excel </span>
+            <img src="img/download-ico.svg" alt="" id="ico-download">
+        </div>
+
+        <div class="detail-form btn-modal-trigger" data-modal="#modal-delete-form" id="delete">
+            Hapus Form
         </div>
 
         <div class="divider-cover">
@@ -81,15 +95,16 @@
         </div>
 
         <div class="opsi">
-            <span class="p" data-target=".table-jawaban" data-sembunyi=".list-pertanyaan">Tabel jawaban</span>
             <span class="p active" data-target=".list-pertanyaan" data-sembunyi=".table-jawaban">List Pertanyaan</span>
+            <span class="p" data-target=".table-jawaban" data-sembunyi=".list-pertanyaan">Tabel jawaban</span>
         </div>
 
         <div class="list-pertanyaan">
             <div class="button-group">
-                <button class="p btn-blue">Tambah Pertayaan</button>
+                <button class="p btn-blue btn-modal-trigger" data-modal="#modal-tambah-pertanyaan">Tambah
+                    Pertayaan</button>
                 <button class="p btn-red">Kunci Seluruh Pertanyaan</button>
-                <button class="p btn-green">Urutkan Pertanyaan</button>
+                <button class="p btn-green btn-modal-trigger" data-modal="#modal-urutkan-pertanyaan">Urutkan Pertanyaan</button>
             </div>
 
             <table>
@@ -148,8 +163,301 @@
         </div>
     </div>
 
+
+    <div class="modal hide" id="modal-identity">
+        <div class="modal-box">
+            <div class="modal-head">
+                <span class="modal-title h4">
+                    Title
+                </span>
+                <span class="close-button modal-close-button">
+                    Close
+                </span>
+            </div>
+            <hr>
+            <div class="modal-body p">
+                <form action="#" method="GET">
+                    <!-- @csrf -->
+                    <div class="form-group">
+                        <label for="judul">Judul</label>
+                        <input name="judul" type="text" class="form-control form-previewed" id="judul"
+                            data-error="#error-judul" data-preview="#form-preview-title"
+                            value="Pendaftaran Kepanitiaan">
+                        <small class="form-error caption hide" id="error-judul">Harus di isi</small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="deadline">Deadline</label>
+                        <input name="deadline" type="datetime-local" class="form-control " id="deadline"
+                            data-error="#error-deadline">
+                        <small class="form-error caption hide" id="error-deadline">Harus di isi</small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="deskripsi">Deskripsi</label>
+                        <textarea name="deskripsi" id="deskripsi" class="form-control form-previewed" cols="" rows="3"
+                            data-error="#error-deskripsi"
+                            data-preview="#form-preview-deskripsi">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptates, repellendus?</textarea>
+                        <small class="form-error caption hide" id="error-deskripsi">Harus di isi</small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="afterform">After-form message</label>
+                        <textarea name="afterform" id="afterform" class="form-control form-previewed" cols="" rows="3"
+                            data-error="#error-afterform"
+                            data-preview="#form-preview-afterform">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, iure.</textarea>
+                        <small class="form-error caption hide" id="error-afterform">Harus di isi</small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="afterform-link">Afterform-link</label>
+                        <input name="afterform-link" type="text" class="form-control form-previewed" id="afterform-link"
+                            data-error="#error-afterform-link" data-preview="#form-preview-afterform-link"
+                            value="line.com/masukgroup">
+                        <small class="form-error caption hide" id="error-afterform-link">Harus di isi</small>
+                    </div>
+
+                </form>
+            </div>
+            <hr>
+            <div class="modal-foot">
+                <button class="btn-close p modal-close-button">cancel</button>
+                <button class="btn-submit p modal-go-btn">submit</button>
+            </div>
+        </div>
+
+        <div class="modal-box-group">
+
+            <div class="modal-box">
+                <div class="modal-head">
+                    <span class="modal-title h4">
+                        Live-Preview
+                    </span>
+                </div>
+                <hr>
+                <div class="modal-body p">
+                    <form action="#">
+                        <span id="form-preview-title" class="h4 form-header">Title</span>
+                        <div class="form-group">
+                            <p id="form-preview-deskripsi">(Deskripsi) HIMSI adalah lorem ipsum Lorem ipsum dolor, sit
+                                amet
+                                consectetur adipisicing
+                                elit. Fugiat
+                                magnam illum, doloribus esse placeat fuga laboriosam deleniti id nemo molestias.
+                            </p>
+                        </div>
+                        <div class="form-group">
+                            <label for="contoh">Contoh</label>
+                            <input type="text" class="form-control" disabled placeholder="cuma contoh">
+                            <small class="form-error caption">Contoh error</small>
+                        </div>
+                        <div class="form-group submit">
+                            <button disabled type="" class="btn btn-primary">contoh button<img src="img/send.svg"
+                                    alt=""></button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <div class="modal-box">
+                <div class="modal-head">
+                    <span class="modal-title h4">After-form Message Preview</span>
+                </div>
+                <hr>
+                <div class="modal-body">
+                    <div class='alert alert-success-form'>Sukses</div>
+
+                    <div class="form-group">
+                        <h4>Terima kasih telah mengisi Form ini, semoga lekas waras</h4>
+                        <h4 id="form-preview-afterform">here</h4>
+                        <a href="#" class="underline-link"
+                            id="form-preview-afterform-link">form-preview-afterform-link</a>
+                        <a href="#">Isi Form lagi</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+
+    <div class="modal hide" id="modal-shortlink">
+        <div class="modal-box">
+            <div class="modal-head">
+                <span class="modal-title h4">
+                    Edit Short-Link
+                </span>
+                <span class="close-button modal-close-button">
+                    Close
+                </span>
+            </div>
+            <hr>
+            <div class="modal-body p">
+                <form action="#" method="GET">
+                    <!-- @csrf -->
+                    <div class="form-group">
+                        <small class="caption">himsiunair.com/f/<strong>XXXX</strong> (isi dibawah)</small>
+                        <input name="shortlink" type="text" class="form-control" id="shortlink"
+                            data-error="#error-shortlink">
+                        <small class="form-error caption hide" id="error-shortlink">Harus di isi</small>
+                    </div>
+
+                </form>
+            </div>
+            <hr>
+            <div class="modal-foot">
+                <button class="btn-close p modal-close-button">cancel</button>
+                <button class="btn-submit p modal-go-btn">submit</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal hide" id="modal-tambah-pertanyaan">
+        <div class="modal-box">
+            <div class="modal-head">
+                <span class="modal-title h4">
+                    Tambah Pertanyaan
+                </span>
+                <span class="close-button modal-close-button">
+                    Close
+                </span>
+            </div>
+            <hr>
+            <div class="modal-body p">
+                <form action="#" method="GET">
+                    <!-- @csrf -->
+                    <div class="form-group">
+                        <label for="tambah-pertanyaan-title">Judul Pertanyaan-nya</label>
+                        <input name="tambah-pertanyaan-title" type="text" class="form-control"
+                            id="tambah-pertanyaan-title" data-error="#error-tambah-pertanyaan-title">
+                        <small class="form-error caption hide" id="error-tambah-pertanyaan-title">Harus di isi</small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="tambah-pertanyaan-jenis">Tipe Pertanyaan</label>
+                        <select class="form-control" id="tambah-pertanyaan-jenis"
+                            data-error="#error-tambah-pertanyaan-jenis">
+                            <option class="default" value="" disabled selected>pilih</option>
+                            <option value="text">text pendek</option>
+                            <option value="textarea">text panjang</option>
+                            <option value="select">opsi / pilihan ganda</option>
+                            <option value="date">tanggal</option>
+                            <option value="datetime-local">tanggal dan jam</option>
+                            <option value="number">angka</option>
+                        </select>
+                        <small class="form-error caption hide" id="error-tambah-pertanyaan-jenis">Harus di isi</small>
+                    </div>
+                    <div class="form-group hide" id="tambah-pertanyaan-opsi-group">
+                        <label for="tambah-pertanyaan-opsi">Opsi</label>
+                        <small class="caption">pisahkan opsi menggunakan tanda koma (,)</small>
+                        <textarea name="" id="tambah-pertanyaan-opsi" class="form-control" cols="" rows="3"></textarea>
+
+                    </div>
+
+                </form>
+            </div>
+            <hr>
+            <div class="modal-foot">
+                <button class="btn-close p modal-close-button">cancel</button>
+                <button class="btn-submit p modal-go-btn">submit</button>
+            </div>
+        </div>
+
+        <div class="modal-box">
+            <div class="modal-head">
+                <span class="modal-title h4">Preview Form Field</span>
+            </div>
+            <hr>
+            <div class="modal-body">
+                <div class="form-group" id="tambah-pertanyaan-preview">
+                    <label id="tambah-pertanyaan-preview-title">Judul Pertanyaan</label>
+                    <input type="text" disabled class="form-control" placeholder="sama dengan judul">
+                    <textarea name="" id="" class="form-control hide" cols="" rows="3"></textarea>
+                    <select class="form-control hide">
+                        <option value="" disabled selected>pilih</option>
+                    </select>
+                    <small class="form-error caption">Contoh error</small>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal hide" id="modal-urutkan-pertanyaan">
+        <div class="modal-box">
+            <div class="modal-head">
+                <span class="modal-title h4">Urutkan Pertanyaan</span>
+                <span class="close-button modal-close-button">Close</span>
+            </div>
+            <hr>
+            <div class="modal-body">
+                <form action="#" method="post">
+                    <!-- @csrf -->
+                    <div class="form-group">
+                        <label for="sort-pertanyaan">Pertanyaan yang ingin dipindah</label>
+                        <select name="pertanyaan" id="sort-pertanyaan" class="form-control" data-error="#sort-pertanyaan-error">
+                            <option value="" disabled selected>pilih</option>
+                            <option value="1">siapa namamu</option>
+                            <option value="2">dimaana rumahmu</option>
+                        </select>
+                        <small class="form-error caption hide" id="sort-pertanyaan-error">Harus dipilih</small>
+                    </div>
+                    <div class="form-group">
+                        <label for="sort-urutan">Pertanyaan dipindah ke posisi berapa</label>
+                        <select name="urutan" id="sort-urutan" class="form-control" data-error="#sort-urutan-error">
+                            <option value="" disabled selected>pilih</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                        </select>
+                        <small class="form-error caption hide" id="sort-urutan-error">Harus dipilih</small>
+                    </div>
+                </form>
+            </div>
+            <hr>
+            <div class="modal-foot">
+                <button class="btn-close p modal-close-button">cancel</button>
+                <button class="btn-submit p modal-go-btn">submit</button>
+            </div>
+        </div>
+
+        <div class="modal-box">
+            <div class="modal-head">
+                <span class="modal-title">Urutan Sekarang</span>
+            </div>
+            <hr>
+            <div class="modal-body">
+                <span class="p"><strong>1 </strong>Siapa Namamu</span>
+                <span class="p"><strong>2 </strong>Dimana Rumahmu</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="modal-delete-form">
+        <div class="modal-box">
+            <div class="modal-head">
+                <span class="modal-title">Anda yakin ?</span>
+                <span class="close-button modal-close-button">Close</span>
+            </div>
+            <hr>
+            <div class="modal-body">
+                <span class="p">Apakah Anda yakin untuk menghapus form ini?</span>
+                <span class="caption">form yang sudah dihapus tidak dapat dikembalikan datanya</span>
+            </div>
+            <form action="#" class="hide">
+                <!-- @csrf -->
+                <!-- @method('DELETE') -->
+            </form>
+            <hr>
+            <div class="modal-foot">
+                <button class="btn-close p modal-close-button">cancel</button>
+                <button class="btn-danger p modal-go-btn">Hapus</button>
+            </div>
+        </div>
+    </div>
+
     <script src="form-edit.js"></script>
     <script src="navtop.js"></script>
+    <script src="script.js"></script>
 </body>
 
 </html>

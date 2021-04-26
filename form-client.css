@@ -41,9 +41,11 @@ hr.divider {
 }
 
 section.membuat {
+    width: 80%;
     display: grid;
     grid-template-columns: 1fr 1fr;
     position: relative;
+    gap: 20px;
 }
 
 section.membuat .info {
@@ -110,13 +112,14 @@ section.preview img {
 
 @media screen and (min-width: 1440px) {
     .info {
-        padding: 0 150px;
+        /* padding: 0 150px; */
     }
 }
 
 @media screen and (max-width: 1028px) {
     section.membuat {
         grid-template-columns: 1fr;
+        width: 100%;
     }
 }
 
