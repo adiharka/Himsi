@@ -104,7 +104,8 @@
                 <button class="p btn-blue btn-modal-trigger" data-modal="#modal-tambah-pertanyaan">Tambah
                     Pertayaan</button>
                 <button class="p btn-red">Kunci Seluruh Pertanyaan</button>
-                <button class="p btn-green btn-modal-trigger" data-modal="#modal-urutkan-pertanyaan">Urutkan Pertanyaan</button>
+                <button class="p btn-green btn-modal-trigger" data-modal="#modal-urutkan-pertanyaan">Urutkan
+                    Pertanyaan</button>
             </div>
 
             <table>
@@ -124,27 +125,9 @@
                         <td>Namamu</td>
                         <td>Ya</td>
                         <td class="aksi">
-                            <a href="#" class="edit">Edit</a>
-                            <a href="#" class="delete">Delete</a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th>1</th>
-                        <td>text</td>
-                        <td>Namamu</td>
-                        <td>Ya</td>
-                        <td class="aksi">
-                            <a href="#" class="edit">Edit</a>
-                            <a href="#" class="delete">Delete</a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th>1</th>
-                        <td>text</td>
-                        <td>Namamu</td>
-                        <td>Ya</td>
-                        <td class="aksi">
-                            <a href="#" class="edit">Edit</a>
+                            <a href="#" class="edit btn-modal-trigger" data-modal="#modal-tambah-pertanyaan"
+                                data-tipe="select" data-quest="Judul Pertanyaan" data-opsi="ya,tidak,bisajadi"
+                                data-unique="74" data-wajib="0">Edit</a>
                             <a href="#" class="delete">Delete</a>
                         </td>
                     </tr>
@@ -153,7 +136,90 @@
         </div>
 
         <div class="table-jawaban">
-            <h3>nih table jawaban nyusul Ya</h3>
+            <div class="button-group">
+                <div class="input-group">
+                    <label for="filter-by">filter-by</label>
+                    <select name="" id="filter-by" class="form-control">
+                        <option value="" disabled selected>filter-by</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                    </select>
+                </div>
+                <div class="input-group">
+                    <label for="value-by">Value Filter</label>
+                    <input type="text" class="form-control" placeholder="value">
+                    <select name="" id="filter-by" class="form-control hide">
+                        <option value="" disabled selected>value-filter</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                    </select>
+                </div>
+                <button class="btn-primary">Cari</button>
+                <div class="input-group">
+                    <label for="show-by">show-by</label>
+                    <select name="" id="show-by" class="form-control">
+                        <option value="5" selected>5</option>
+                        <option value="10">10</option>
+                        <option value="20">20</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="jawaban-row">index1</div>
+            <div class="jawaban-row">index2</div>
+            <div class="jawaban-row">index3</div>
+            <div class="jawaban-row">index4</div>
+            <div class="jawaban-row">index5</div>
+            <div class="jawaban-row">index6</div>
+            <div class="jawaban-row">index7</div>
+            <div class="jawaban-row">index8</div>
+            <div class="jawaban-row">index9</div>
+            <div class="jawaban-row">index10</div>
+            <div class="jawaban-row">index11</div>
+            <div class="jawaban-row">index12</div>
+            <div class="jawaban-row">index13</div>
+            <div class="jawaban-row">index14</div>
+            <div class="jawaban-row">index15</div>
+            <div class="jawaban-row">index16</div>
+            <div class="jawaban-row">index17</div>
+            <div class="jawaban-row">index18</div>
+            <div class="jawaban-row">index19</div>
+            <div class="jawaban-row">index20</div>
+            <div class="jawaban-row">index21</div>
+            <div class="jawaban-row">index22</div>
+            <div class="jawaban-row">index23</div>
+            <div class="jawaban-row">index24</div>
+            <div class="jawaban-row">index25</div>
+            <div class="jawaban-row">index26</div>
+            <div class="jawaban-row">index27</div>
+            <div class="jawaban-row">index28</div>
+            <div class="jawaban-row">index29</div>
+            <div class="jawaban-row">index30</div>
+            <div class="jawaban-row">index31</div>
+            <div class="jawaban-row">index32</div>
+            <div class="jawaban-row">index33</div>
+            <div class="jawaban-row">index34</div>
+            <div class="jawaban-row">index35</div>
+            <div class="jawaban-row">index36</div>
+            <div class="jawaban-row">index37</div>
+            <div class="jawaban-row">index38</div>
+            <div class="jawaban-row">index39</div>
+            <div class="jawaban-row">index40</div>
+            <div class="jawaban-row">index41</div>
+            <div class="jawaban-row">index42</div>
+            <div class="jawaban-row">index43</div>
+            <div class="jawaban-row">index44</div>
+            <div class="jawaban-row">index45</div>
+            <div class="jawaban-row">
+                <span>index46</span>
+                <span class="p"><strong>Nama : </strong>Daffa Yr</span>
+                <span class="p"><strong>Rumah : </strong>Solo</span>
+            </div>
+            <div class="pagination hide" id="jawaban-row-pagination">
+
+            </div>
         </div>
 
         <div class="mobile-message p">
@@ -203,17 +269,21 @@
 
                     <div class="form-group">
                         <label for="afterform">After-form message</label>
-                        <textarea name="afterform" id="afterform" class="form-control form-previewed" cols="" rows="3"
+                        <textarea name="afterform" id="afterform"
+                            class="not-required-validate form-control form-previewed" cols="" rows="3"
                             data-error="#error-afterform"
                             data-preview="#form-preview-afterform">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, iure.</textarea>
+                        <small class="caption">Boleh Kosong</small>
                         <small class="form-error caption hide" id="error-afterform">Harus di isi</small>
                     </div>
 
                     <div class="form-group">
                         <label for="afterform-link">Afterform-link</label>
-                        <input name="afterform-link" type="text" class="form-control form-previewed" id="afterform-link"
+                        <input name="afterform-link" type="text"
+                            class="not-required-validate form-control form-previewed" id="afterform-link"
                             data-error="#error-afterform-link" data-preview="#form-preview-afterform-link"
                             value="line.com/masukgroup">
+                        <small class="caption">Boleh Kosong</small>
                         <small class="form-error caption hide" id="error-afterform-link">Harus di isi</small>
                     </div>
 
@@ -327,6 +397,7 @@
             <div class="modal-body p">
                 <form action="#" method="GET">
                     <!-- @csrf -->
+                    <input type="hidden" name="uniq_id" value="" id="tambah-pertanyaan-unique">
                     <div class="form-group">
                         <label for="tambah-pertanyaan-title">Judul Pertanyaan-nya</label>
                         <input name="tambah-pertanyaan-title" type="text" class="form-control"
@@ -352,7 +423,16 @@
                         <label for="tambah-pertanyaan-opsi">Opsi</label>
                         <small class="caption">pisahkan opsi menggunakan tanda koma (,)</small>
                         <textarea name="" id="tambah-pertanyaan-opsi" class="form-control" cols="" rows="3"></textarea>
-
+                    </div>
+                    <div class="form-group">
+                        <label for="tambah-pertanyaan-wajib">Wajib dijawab</label>
+                        <select class="form-control" id="tambah-pertanyaan-wajib"
+                            data-error="#error-tambah-pertanyaan-wajib">
+                            <option class="default" value="" disabled selected>pilih</option>
+                            <option value="ya">ya</option>
+                            <option value="tidak">tidak</option>
+                        </select>
+                        <small class="form-error caption hide" id="error-tambah-pertanyaan-wajib">Harus di isi</small>
                     </div>
 
                 </form>
@@ -395,7 +475,8 @@
                     <!-- @csrf -->
                     <div class="form-group">
                         <label for="sort-pertanyaan">Pertanyaan yang ingin dipindah</label>
-                        <select name="pertanyaan" id="sort-pertanyaan" class="form-control" data-error="#sort-pertanyaan-error">
+                        <select name="pertanyaan" id="sort-pertanyaan" class="form-control"
+                            data-error="#sort-pertanyaan-error">
                             <option value="" disabled selected>pilih</option>
                             <option value="1">siapa namamu</option>
                             <option value="2">dimaana rumahmu</option>
@@ -432,7 +513,7 @@
         </div>
     </div>
 
-    <div class="modal" id="modal-delete-form">
+    <div class="modal hide" id="modal-delete-form">
         <div class="modal-box">
             <div class="modal-head">
                 <span class="modal-title">Anda yakin ?</span>

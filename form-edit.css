@@ -15,6 +15,8 @@
     border: 1px solid var(--green-vougue);
 }
 
+
+
 .detail-form#short-link {
     align-items: center;
 }
@@ -44,7 +46,7 @@
 }
 
 .detail-form#delete {
-    background-color:#fb2100b7;
+    background-color: #fb2100b7;
     justify-content: center;
     color: var(--polar);
     border: none;
@@ -53,7 +55,7 @@
 }
 
 .detail-form#delete:hover {
-    background-color:#fb2100;
+    background-color: #fb2100;
 }
 
 .detail-form .info {
@@ -61,6 +63,7 @@
     flex-direction: column;
     gap: 3px;
 }
+
 
 .detail-form .btn-edit {
     padding: 10px 20px;
@@ -148,15 +151,18 @@ hr.divider {
     display: none;
 }
 
-.list-pertanyaan {
+.list-pertanyaan,
+.table-jawaban {
     display: flex;
     flex-direction: column;
     gap: 20px;
 }
 
-.list-pertanyaan .button-group {
+.list-pertanyaan .button-group,
+.table-jawaban .button-group {
     display: flex;
     gap: 20px;
+    align-items: flex-end;
 }
 
 .list-pertanyaan .button-group button {
@@ -172,6 +178,7 @@ hr.divider {
     border: 1px dashed var(--daintree);
     color: var(--daintree) !important;
 }
+
 .list-pertanyaan .button-group button.btn-blue {
     background-color: var(--green-vougue);
     color: var(--polar);
@@ -195,7 +202,8 @@ thead {
     color: var(--polar)
 }
 
-td,th {
+td,
+th {
     border: 1px solid #0000007d;
     padding: 10px;
     font-family: Montserrat;
@@ -206,9 +214,7 @@ tbody tr {
 
 }
 
-tbody tr td {
-    
-}
+tbody tr td {}
 
 tbody tr:nth-child(odd) {
     background-color: #E0E0E0;
@@ -231,11 +237,23 @@ td a.delete {
     display: none;
 }
 
+.jawaban-row {
+    padding: 20px;
+    border-radius: 7px;
+    border: 1px solid var(--green-vougue);
+
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
 @media screen and (min-width: 1430px) {
 
     .detail-form,
     .divider-cover,
-    .list-pertanyaan {
+    .list-pertanyaan,
+    .jawaban-row,
+    .pagination {
         width: 50%;
     }
 }
@@ -255,9 +273,12 @@ td a.delete {
         padding: 20px 10px;
     }
 
-    .opsi, .list-pertanyaan, .table-jawaban {
+    .opsi,
+    .list-pertanyaan,
+    .table-jawaban {
         display: none;
     }
+
     .mobile-message {
         display: inline-block;
         align-self: center;

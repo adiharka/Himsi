@@ -27,15 +27,17 @@ function validation(form){
 	var returnal = true;
 	var formcontrol = form.querySelectorAll('.form-control');
 	formcontrol.forEach(fctrl => {
-		var errormsg = document.querySelector(fctrl.dataset.error);
-		if (fctrl.value == "") {
-			returnal = false;
-			fctrl.classList.add('is-invalid');
-			errormsg.classList.remove('hide');
-			errormsg.textContent = "Bagian ini harus di isi"
-		}else{
-			fctrl.classList.remove('is-invalid');
-			errormsg.classList.add('hide');
+		if (!fctrl.classList.contains('not-required-validate')) {
+			var errormsg = document.querySelector(fctrl.dataset.error);
+			if (fctrl.value == "") {
+				returnal = false;
+				fctrl.classList.add('is-invalid');
+				errormsg.classList.remove('hide');
+				errormsg.textContent = "Bagian ini harus di isi"
+			}else{
+				fctrl.classList.remove('is-invalid');
+				errormsg.classList.add('hide');
+			}
 		}
 	});
 
