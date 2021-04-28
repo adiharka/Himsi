@@ -124,6 +124,10 @@
 
 }
 
+.dropdown.active .dropbtn {
+    color: #FFB703 !important;
+}
+
 /* Dropdown Content (Hidden by Default) */
 .dropdown-content {
     display: none;
@@ -240,7 +244,5 @@
     }
 
     /* Change the background color of the dropdown button when the dropdown content is shown */
-    .dropdown.active .dropbtn {
-        color: #FFB703;
-    }
+    
 }

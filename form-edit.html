@@ -27,7 +27,7 @@
             <img src="img/btn-burger.png" alt="" class="nav-burger">
         </div>
         <div class="nav-group">
-            <a href="#" class="nav-item active">
+            <a href="#" class="nav-item">
                 <span class="nav-text"> Beranda </span>
                 <span class="line"></span>
             </a>
@@ -39,7 +39,7 @@
                 <span class="nav-text">CHSI</span>
                 <span class="line"></span>
             </a>
-            <div class="dropdown nav-item">
+            <div class="dropdown active nav-item">
                 <button class="dropbtn">Dropdown<img src="img/drop-down.png" /></button>
                 <div class="dropdown-content">
                     <a href="#">Link 1</a>
@@ -128,7 +128,11 @@
                             <a href="#" class="edit btn-modal-trigger" data-modal="#modal-tambah-pertanyaan"
                                 data-tipe="select" data-quest="Judul Pertanyaan" data-opsi="ya,tidak,bisajadi"
                                 data-unique="74" data-wajib="0">Edit</a>
-                            <a href="#" class="delete">Delete</a>
+                            <a href="#" class="delete btn-delete-pertanyaan">Delete</a>
+                            <form action="#" class="hide"
+                                method="GET">
+                                <input type="hidden" name="abc" value="xyz">
+                            </form>
                         </td>
                     </tr>
                 </tbody>
@@ -352,7 +356,7 @@
 
     </div>
 
-    <div class="modal hide" id="modal-shortlink">
+    <div class="modal" id="modal-shortlink">
         <div class="modal-box">
             <div class="modal-head">
                 <span class="modal-title h4">
@@ -370,6 +374,10 @@
                         <small class="caption">himsiunair.com/f/<strong>XXXX</strong> (isi dibawah)</small>
                         <input name="shortlink" type="text" class="form-control" id="shortlink"
                             data-error="#error-shortlink">
+                        <input type="hidden" name="valid-shortlink" id="valid-shortlink">
+                        <small class="caption form-error" id="preview-shortlink">hanya boleh mengandung [A-Z] [a-z]
+                            [0-9]
+                        </small>
                         <small class="form-error caption hide" id="error-shortlink">Harus di isi</small>
                     </div>
 

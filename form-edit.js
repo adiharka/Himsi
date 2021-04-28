@@ -44,7 +44,7 @@ tambahtitle.addEventListener('input', () => {
     }
 })
 
-function tambahselectlistener(){
+function tambahselectlistener() {
     tambahinputpreview.forEach(input => {
         input.classList.add('hide');
     })
@@ -67,7 +67,7 @@ tambahselect.addEventListener('input', () => {
     tambahselectlistener();
 })
 
-function tambahselectopsilitsener(){
+function tambahselectopsilitsener() {
     var select = tambahformpreview.querySelector('select');
     select.querySelectorAll('option').forEach(option => {
         select.removeChild(option);
@@ -95,7 +95,7 @@ tambahopsifield.addEventListener('input', () => {
     tambahselectopsilitsener()
 });
 
-const jawabanrow = document.querySelectorAll('.jawaban-row');
+var jawabanrow = document.querySelectorAll('.jawaban-row');
 const paginaterow = document.querySelector('#jawaban-row-pagination');
 const showby = document.querySelector('#show-by');
 var showval = showby.value;
@@ -191,6 +191,7 @@ function selectpage(page) {
 }
 
 function pagelistener() {
+    jawabanrow = document.querySelectorAll('.jawaban-row');
     var btnpage = document.querySelectorAll('.btn-page');
     btnpage.forEach(btn => {
         btn.addEventListener('click', () => {
@@ -258,20 +259,61 @@ editbtn.forEach(button => {
         // themodal.querySelectorAll('#tambah-pertanyaan-jenis').value = button.dataset.tipe;
         themodal.querySelectorAll('#tambah-pertanyaan-jenis option').forEach(option => {
             if (option.value == button.dataset.tipe) {
-                option.setAttribute('selected','true');
+                option.setAttribute('selected', 'true');
                 option.click();
             }
         });
         tambahselectlistener();
         themodal.querySelectorAll('#tambah-pertanyaan-wajib option').forEach(option => {
             if (option.value == "ya" && button.dataset.wajib == "1") {
-                option.setAttribute('selected','true');
-            }else if(option.value == "tidak" && button.dataset.wajib == "0"){
-                option.setAttribute('selected','true');
+                option.setAttribute('selected', 'true');
+            } else if (option.value == "tidak" && button.dataset.wajib == "0") {
+                option.setAttribute('selected', 'true');
             }
         })
         themodal.querySelector('#tambah-pertanyaan-opsi').textContent = button.dataset.opsi
         tambahselectopsilitsener()
         themodal.querySelector('#tambah-pertanyaan-unique').value = button.dataset.unique
+        themodal.querySelector('form').setAttribute('action',button.dataset.link);
     })
 });
+
+document.querySelector('#btn-tambah-pertanyaan').addEventListener('click',(e)=>{
+    document.querySelector(e.target.dataset.modal).querySelector('form').setAttribute('action',e.target.dataset.link);
+})
+
+
+function cekregex(string) {
+    var a = /[a-z]/i
+    var b = /[0-9]/
+    var result = []
+    str = string.split('');
+    str.forEach(char => {
+        if (a.exec(char) || b.exec(char)) {
+            result.push(char)
+        }
+    });
+
+    return result.join('');
+}
+
+
+document.querySelector('input#shortlink').addEventListener('input', (e) => {
+    var shortlinkval = e.target.value
+    document.querySelector('input#valid-shortlink').value = cekregex(shortlinkval);
+    console.log(cekregex(shortlinkval));
+    if (cekregex(shortlinkval) == "") {
+        document.querySelector('small#preview-shortlink').classList.add('form-error');
+        document.querySelector('small#preview-shortlink').textContent = "hanya boleh mengandung [A-Z] [a-z] [0-9]";
+    }else{
+        document.querySelector('small#preview-shortlink').classList.remove('form-error');
+        document.querySelector('small#preview-shortlink').textContent = "himsiunair.com/f/"+cekregex(shortlinkval);
+    }
+})
+
+document.querySelectorAll('.btn-delete-pertanyaan').forEach(button => {
+    button.addEventListener('click',(e)=>{
+        e.preventDefault();
+        button.parentElement.querySelector('form').submit();
+    })
+})

@@ -1,3 +1,10 @@
+.content {
+    padding: 50px 100px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
 .form-header {
     padding: 11.5px 20px;
     color: var(--polar);
@@ -6,55 +13,37 @@
 
 .alert {
     border: 1px solid transparent;
+    padding: 11.5px 20px;
+    
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 20px;
 }
 
 .alert-info-form {
     color: var(--daintree);
     background-color: var(--cornflower);
-    padding: 11.5px 20px;
-
-    font-family: Montserrat;
-    font-style: normal;
-    font-weight: 300;
-    font-size: 14px;
-    line-height: 17px;
 }
 
 .alert-primary-form {
     color: var(--daintree);
     background-color: var(--info);
-    padding: 11.5px 20px;
-
-    font-family: Montserrat;
-    font-style: normal;
-    font-weight: 300;
-    font-size: 14px;
-    line-height: 17px;
 }
 
 .alert-danger-form {
     color: var(--polar);
     background-color: var(--danger);
-    padding: 11.5px 20px;
-
-    align-items: center;
-    font-family: Montserrat;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 16px;
-    line-height: 20px;
 }
 
 .alert-success-form {
     color: var(--daintree);
     background-color: var(--success);
-    padding: 11.5px 20px;
+}
 
-    font-family: Montserrat;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 16px;
-    line-height: 20px;
+.alert-warning-form {
+    color: var(--daintree);
+    background-color: var(--selective-yellow);
 }
 
 form.form-feature {
@@ -151,7 +140,6 @@ p {
     cursor: pointer;
     
     color: var(--daintree);
-    font-family: Montserrat;
     font-style: normal;
     text-align: center;
     font-weight: 300;
@@ -239,7 +227,6 @@ p {
     gap: 7px;
     padding: 0px 11.5px;
 
-    font-family: Montserrat;
     font-style: normal;
     font-weight: 300;
     font-size: 14px;
