@@ -1,0 +1,51 @@
+body {
+    background-image: url('img/loginadminbg.png');
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container,
+.container-title,
+.container-body,
+.container-footer,
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container {
+    padding: 50px 30px;
+    background-color: var(--base);
+
+    gap: 60px;
+}
+
+h2 {
+    padding: 0 !important;
+}
+.container-title {
+    gap: 5px;
+}
+
+.container-body,
+form {
+    width: 100%;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.form-group {
+    width: 100%;
+    gap: 3px;
+}
+
+button {
+    width: 100% !important;
+    cursor: pointer;
+}

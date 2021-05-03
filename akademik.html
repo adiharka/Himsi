@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AKADEMIK</title>
+
+    <link rel="stylesheet" href="env.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="navtop.css">
+    <link rel="stylesheet" href="akademik.css">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="nav">
+        <div class="nav-mobile">
+            <img src="img/btn-burger.png" alt="" class="nav-burger">
+        </div>
+        <div class="nav-group">
+            <a href="#" class="nav-item active">
+                <span class="nav-text"> Beranda </span>
+                <span class="line"></span>
+            </a>
+            <a href="#" class="nav-item">
+                <span class="nav-text">Profil</span>
+                <span class="line"></span>
+            </a>
+            <a href="#" class="nav-item">
+                <span class="nav-text">CHSI</span>
+                <span class="line"></span>
+            </a>
+            <div class="dropdown nav-item">
+                <button class="dropbtn">Dropdown<img src="img/drop-down.png" /></button>
+                <div class="dropdown-content">
+                    <a href="#">Link 1</a>
+                    <a href="#">Link 2</a>
+                    <a href="#">Link 3</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="content">
+        <span class="h2">Berkas Akademik</span>
+        <div class="test1">
+            <div onclick="window.open('https://drive.google.com/open?id=1WOEJ530ZbAD1T_jsfvxZ06zhctKRaRdA')">
+                <img src="image/akademiknew/Frame 15.png" alt="">
+                <span>Skripsi </span>
+            </div>
+            <div onclick="window.open('https://drive.google.com/open?id=1JhWRoatAJO5qRjnLsOA43ltT6SY0o9k4')">
+                <img src="image/akademiknew/Frame 16.png" alt="" id="img2">
+                <span>Bank Soal </span>
+            </div>
+            <div onclick="window.open('https://drive.google.com/open?id=1izNNCMH2o11yV2-4F74ryRskWhGeuJAV')">
+                <img src="image/akademiknew/Frame 17.png" alt="" id="img3">
+                <span>PKM </span>
+            </div>
+            <div onclick="window.open('https://drive.google.com/open?id=1sYrAn-M1V9n6BpZr3dKPEZU6elng3cTf')">
+                <img src="image/akademiknew/Frame 18.png" alt="" id="img4">
+                <span>Bank Materi </span>
+            </div>
+            <div onclick="window.open('https://drive.google.com/drive/folders/1RI4miI-ZaJO4yjt8IMK8LlzMR0p7nqJL?usp=sharing')">
+                <img src="image/akademiknew/Frame 19.png" alt="">
+                <span>Software Tools </span>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="navtop.js"></script>
+    <script>
+        document.querySelectorAll('.grid-system .card').forEach(card => {
+            card.style.height = (400 / 300) * card.offsetWidth + "px";
+        })
+
+        window.addEventListener('resize', () => {
+            document.querySelectorAll('.grid-system .card').forEach(card => {
+                card.style.height = (400 / 300) * card.offsetWidth + "px";
+            })
+        })
+    </script>
+</body>
+
+</html>

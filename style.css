@@ -15,6 +15,7 @@
     border: 1px solid transparent;
     padding: 11.5px 20px;
     
+    font-family: Montserrat;
     font-style: normal;
     font-weight: normal;
     font-size: 16px;
@@ -45,7 +46,6 @@
     color: var(--daintree);
     background-color: var(--selective-yellow);
 }
-
 form.form-feature {
     display: flex;
     flex-direction: column;
@@ -140,6 +140,7 @@ p {
     cursor: pointer;
     
     color: var(--daintree);
+    font-family: Montserrat;
     font-style: normal;
     text-align: center;
     font-weight: 300;
@@ -227,6 +228,7 @@ p {
     gap: 7px;
     padding: 0px 11.5px;
 
+    font-family: Montserrat;
     font-style: normal;
     font-weight: 300;
     font-size: 14px;
