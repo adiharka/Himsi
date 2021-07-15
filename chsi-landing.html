@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>navtop</title>
+
+    <link rel="stylesheet" href="env.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="navtop.css">
+    <link rel="stylesheet" href="chsi-landing.css">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Poppins:wght@400;600;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="nav">
+        <div class="nav-mobile">
+            <img src="img/btn-burger.png" alt="" class="nav-burger">
+        </div>
+        <div class="nav-group">
+            <a href="#" class="nav-item active">
+                <span class="nav-text"> Beranda </span>
+                <span class="line"></span>
+            </a>
+            <a href="#" class="nav-item">
+                <span class="nav-text">Profil</span>
+                <span class="line"></span>
+            </a>
+            <a href="#" class="nav-item">
+                <span class="nav-text">CHSI</span>
+                <span class="line"></span>
+            </a>
+            <div class="dropdown nav-item">
+                <button class="dropbtn">Dropdown<img src="img/drop-down.png" /></button>
+                <div class="dropdown-content">
+                    <a href="#">Link 1</a>
+                    <a href="#">Link 2</a>
+                    <a href="#">Link 3</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="content">
+        <!-- <div class="alert alert-info-form">hey</div>
+        <div class="alert alert-danger-form">hey</div>
+        <div class="alert alert-warning-form">hey</div>
+        <div class="alert alert-success-form">hey</div> -->
+        <div class="main-content">
+            <h2>Sesi <span class="orange">Curhat</span></h2>
+            <span class="p">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veniam inventore officiis nulla.
+                Delectus et, temporibus ut nulla necessitatibus doloremque voluptate rerum repudiandae itaque doloribus
+                maxime assumenda ab qui illum debitis minima fugiat vero mollitia dolor ratione sint architecto? Dolorum
+                officiis repellendus molestias fuga voluptatibus exercitationem alias itaque quae sint pariatur?</span>
+            <form action="#" class="box-content">
+                <span class="box-label">
+                    Isi Curhatanmu
+                </span>
+
+                <textarea name="" id="" rows="6"></textarea>
+
+                <span class="box-label" style="margin-top: 14px;">Ingin mendapatkan respon ?</span>
+                <div class="form-group">
+                    <label for="tanggapan">Ya, Aku mau</label>
+                    <input type="checkbox" name="" id="tanggapan" placeholder="ya aku mau">
+                </div>
+
+                <button type="submit" class="btn-primary"><strong>Kirim Curhatan</strong></button>
+            </form>
+
+            <div class="hr-break">
+                <hr>
+                <span>atau</span>
+            </div>
+
+            <div class="cek-curhatan">
+                <span class="h4">
+                    Cek curhatan sebleumnya 
+                </span>
+                <input type="text" class="form-control" placeholder="Masukkan Token">
+                <button id="cari-curhat" class="btn-primary"><img src="https://img.icons8.com/material-outlined/50/000000/search.png"/ style="height: 25px; width: 25px; filter: invert(1);"></button>
+            </div>
+        </div>
+        <img src="image/chsiLanding.png" alt="" id="sini-curhat">
+
+
+    </div>
+
+    <script src="navtop.js"></script>
+
+</body>
+
+</html>

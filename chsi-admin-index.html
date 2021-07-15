@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CHSI admin index </title>
+
+    <link rel="stylesheet" href="env.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="navtop.css">
+    <link rel="stylesheet" href="form-list.css">
+    <link rel="stylesheet" href="chsi-admin-index.css">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Poppins&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="nav">
+        <div class="nav-mobile">
+            <img src="img/btn-burger.png" alt="" class="nav-burger">
+        </div>
+        <div class="nav-group">
+            <a href="#" class="nav-item active">
+                <span class="nav-text"> Beranda </span>
+                <span class="line"></span>
+            </a>
+            <a href="#" class="nav-item">
+                <span class="nav-text">Profil</span>
+                <span class="line"></span>
+            </a>
+            <a href="#" class="nav-item">
+                <span class="nav-text">CHSI</span>
+                <span class="line"></span>
+            </a>
+            <div class="dropdown nav-item">
+                <button class="dropbtn">Dropdown<img src="img/drop-down.png" /></button>
+                <div class="dropdown-content">
+                    <a href="#">Link 1</a>
+                    <a href="#">Link 2</a>
+                    <a href="#">Link 3</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="content">
+        <!-- <div class="alert alert-info-form">hey</div>
+        <div class="alert alert-danger-form">hey</div>
+        <div class="alert alert-warning-form">hey</div>
+        <div class="alert alert-success-form">hey</div> -->
+
+        <span class="h2">Form list</span>
+        <div class="button-group">
+            <select type="text" name="" id="" class="form-control">
+                <option value="" selected>tampilkan semua</option>
+                <option value="">tanpa respon</option>
+                <option value="">dengan respon (semua)</option>
+                <option value="">dengan respon (belum diakhiri)</option>
+                <option value="">dengan respon (menunggu balasan)</option>
+                <option value="">dengan respon (sudah diakhiri)</option>
+            </select>
+        </div>
+        <div class="grid-system">
+            <div class="card" data-link="http://instagram.com">
+                <div class="card-body p">
+                    <span class="card-title">786as7d7</span>
+                    <span class="">TANPA RESPON <span class="finished">SELESAI</span></span>
+                </div>
+                <div class="card-line">
+                </div>
+            </div>
+            <div class="card" data-link="http://instagram.com">
+                <div class="card-body p">
+                    <span class="card-title">786as7d7</span>
+                    <span class="">DENGAN RESPON <span class="unfinished">BELUM</span></span>
+                </div>
+                <div class="card-line">
+                </div>
+            </div>
+            <div class="card" data-link="http://instagram.com">
+                <div class="card-body p">
+                    <span class="card-title">786as7d7</span>
+                    <span class="">DENGAN RESPON <span class="waiting">MENUNGGU BALASAN</span></span>
+                </div>
+                <div class="card-line">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="navtop.js"></script>
+    <script src="form-list.js"></script>
+</body>
+
+</html>

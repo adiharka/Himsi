@@ -14,7 +14,7 @@
 .alert {
     border: 1px solid transparent;
     padding: 11.5px 20px;
-    
+
     font-family: Montserrat;
     font-style: normal;
     font-weight: normal;
@@ -46,6 +46,7 @@
     color: var(--daintree);
     background-color: var(--selective-yellow);
 }
+
 form.form-feature {
     display: flex;
     flex-direction: column;
@@ -89,7 +90,8 @@ p {
 
 }
 
-.form-group textarea {
+.form-group textarea,
+textarea {
     overflow: auto;
     padding-top: 11.5px;
     resize: vertical;
@@ -97,7 +99,8 @@ p {
     min-height: 40px;
 }
 
-.form-control {
+.form-control,
+textarea {
     font-family: Montserrat;
     font-style: normal;
     font-weight: 300;
@@ -208,6 +211,7 @@ p {
 }
 
 .btn-primary {
+    min-width: fit-content;
     width: 115px;
     height: 40px;
     border: none;
@@ -313,5 +317,11 @@ p {
 
     form.form-feature {
         width: 65%;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .content {
+        padding: 20px 10px;
     }
 }
