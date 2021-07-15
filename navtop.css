@@ -124,6 +124,10 @@
 
 }
 
+.dropdown.active .dropbtn {
+    color: #FFB703 !important;
+}
+
 /* Dropdown Content (Hidden by Default) */
 .dropdown-content {
     display: none;
@@ -208,6 +212,7 @@
         left: 0;
         width: 100vw;
         height: fit-content;
+        z-index: 2;
 
         background: #023047;
         box-shadow: 0px 6px 30px rgba(26, 26, 26, 0.4);
@@ -229,4 +234,15 @@
         display: none;
     }
 
+    .dropdown .dropdown-content {
+        display: none !important;
+    }
+
+    /* Show the dropdown menu on hover */
+    .dropdown.active .dropdown-content {
+        display: block !important;
+    }
+
+    /* Change the background color of the dropdown button when the dropdown content is shown */
+    
 }

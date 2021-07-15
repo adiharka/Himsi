@@ -1,0 +1,134 @@
+.content {
+    padding: 20px 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form-group {
+    margin: 0 !important;
+    width: 100%;
+}
+
+section.mengisi {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+section.mengisi .form-group {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+
+section.mengisi .form-group label {
+    margin: 0 !important;
+}
+
+button.btn-primary {
+    width: 200px;
+}
+
+hr.divider {
+    width: 80%;
+    height: 3px;
+    background-color: var(--green-vougue);
+    margin: 35px 0;
+}
+
+section.membuat {
+    width: 80%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    position: relative;
+    gap: 20px;
+}
+
+section.membuat .info {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    /* background-image: url(img/Blob.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain; */
+    height: 300px;
+}
+
+section.membuat .info img {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    z-index: -1;
+    opacity: 50%;
+}
+
+/* padding: 0 30px; */
+section.membuat .info .desc {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+br {
+    margin: 3px 0;
+}
+
+section.membuat .field {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    align-items: center;
+}
+
+.field .form-group .form-field {
+    display: flex;
+    width: 100%;
+    gap: 10px;
+}
+
+section.preview {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+section.preview img {
+    background: linear-gradient(90deg, #ECE9E6 0%, #FFFFFF 100%);
+    border-radius: 7px;
+    border: 1px solid var(--green-vougue);
+    width: 100%;
+    opacity: 80%;
+}
+
+
+@media screen and (min-width: 1440px) {
+    .info {
+        /* padding: 0 150px; */
+    }
+}
+
+@media screen and (max-width: 1028px) {
+    section.membuat {
+        grid-template-columns: 1fr;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 780px) {
+    .content {
+        padding: 10px;
+    }
+
+    body {
+        overflow-x: hidden;
+    }
+}

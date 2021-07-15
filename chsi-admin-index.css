@@ -1,0 +1,35 @@
+.button-group {
+    display: flex;
+    gap: 15px;
+}
+
+.form-control {
+    width: fit-content;
+}
+
+.finished {
+    padding: 3px 8px;
+    border-radius: 7px;
+    background-color: var(--success);
+    width: fit-content;
+}
+
+.unfinished {
+    padding: 3px 8px;
+    border-radius: 7px;
+    background-color: var(--attention);
+    width: fit-content;
+}
+
+.waiting {
+    padding: 3px 8px;
+    border-radius: 7px;
+    background-color: var(--danger);
+    color: var(--polar);
+    width: fit-content;
+}
+
+.card:hover {
+    cursor: pointer;
+}
+

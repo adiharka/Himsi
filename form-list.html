@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>navtop</title>
+
+    <link rel="stylesheet" href="env.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="navtop.css">
+    <link rel="stylesheet" href="form-list.css">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Poppins&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="nav">
+        <div class="nav-mobile">
+            <img src="img/btn-burger.png" alt="" class="nav-burger">
+        </div>
+        <div class="nav-group">
+            <a href="#" class="nav-item active">
+                <span class="nav-text"> Beranda </span>
+                <span class="line"></span>
+            </a>
+            <a href="#" class="nav-item">
+                <span class="nav-text">Profil</span>
+                <span class="line"></span>
+            </a>
+            <a href="#" class="nav-item">
+                <span class="nav-text">CHSI</span>
+                <span class="line"></span>
+            </a>
+            <div class="dropdown nav-item">
+                <button class="dropbtn">Dropdown<img src="img/drop-down.png" /></button>
+                <div class="dropdown-content">
+                    <a href="#">Link 1</a>
+                    <a href="#">Link 2</a>
+                    <a href="#">Link 3</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="content">
+        <!-- <div class="alert alert-info-form">hey</div>
+        <div class="alert alert-danger-form">hey</div>
+        <div class="alert alert-warning-form">hey</div>
+        <div class="alert alert-success-form">hey</div> -->
+
+        <span class="h2">Form list</span>
+        <div class="button-group">
+            <button class="btn btn-primary btn-modal-trigger" data-modal="#modal-buat-form">Buat <img src="img/plus.svg" alt=""></button>
+        </div>
+        <div class="grid-system">
+            <div class="card"  data-link="http://instagram.com">
+                <div class="card-body p">
+                    <span class="card-title">Title</span>
+                    <span class="">ABCDEF</span>
+                    <span class="">ABCDEF</span>
+                </div>
+                <div class="card-line">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="modal-buat-form">
+        <div class="modal-box">
+            <div class="modal-head">
+                <span class="modal-title">Buat Form Baru</span>
+                <span class="modal-close-button close-button">Close</span>
+            </div>
+            <hr>
+            <div class="modal-body">
+                <form action="#" method="get">
+                    <!-- @csrf -->
+                    <div class="form-group">
+                        <label for="exampleInput1">Judul Form</label>
+                        <input name="" type="text" class="form-control" id="exampleInput1" data-error="#exampleInput1Error">
+                        <small class="form-error caption hide" id="exampleInput1Error">Harus di isi</small>
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInput2">Deksirpsi</label>
+                        <textarea name="" id="exampleInput2" rows="3" class="form-control" data-error="#exampleInput2Error"></textarea>
+                        <small class="form-error caption hide" id="exampleInput2Error">Harus di isi</small>
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInput3">Deadline Form</label>
+                        <input name="" type="datetime-local" class="form-control" id="exampleInput3" data-error="#exampleInput3Error">
+                        <small class="form-error caption hide" id="exampleInput3Error">Harus di isi</small>
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInput4">Pemilik Form</label>
+                        <select name="" id="exampleInput4" class="form-control" data-error="#exampleInput4Error">
+                            <option value="">pilih</option>
+                            <option value="HIMSI">HIMSI, akses edit untuk semua bidang</option>
+                            <option value="RISTEK">RISTEK, akses edit hanya bidang anda</option>
+                        </select>
+                        <small class="form-error caption hide" id="exampleInput4Error">Harus di isi</small>
+                    </div>
+                    <div class="form-group">
+                        <label for="">For Your Information</label>
+                        <textarea disabled name="" id="" cols="" rows="4" class="form-control">untuk afterform, afterformlink bisa anda edit di detail edit, menambah pertanyaan juga dilakukan disana, mengubah shortlink juga dilakukan disana</textarea>
+                    </div>
+                </form>
+                
+            </div>
+            <hr>
+            <div class="modal-foot">
+                <button class="modal-close-button btn-close">Cancel</button>
+                <button class="btn-submit modal-go-btn">Submit</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="navtop.js"></script>
+    <script src="form-list.js"></script>
+</body>
+
+</html>

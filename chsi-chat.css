@@ -1,0 +1,149 @@
+.content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+h2,
+.h2 {
+    padding: 0 !important;
+}
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.orange {
+    color: var(--flush-orange);
+}
+
+.box-chat {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    height: 50vh;
+    overflow-y: scroll;
+    border-radius: 13px;
+}
+
+.box-chat::-webkit-scrollbar {
+    width: 12px;
+}
+
+.box-chat::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(255, 255, 255, 0.3);
+}
+
+.box-chat::-webkit-scrollbar-thumb {
+    -webkit-box-shadow: inset 0 0 20px rgb(255, 255, 255, 0.7);
+}
+
+.baloon {
+    width: fit-content;
+    max-width: 80%;
+    padding: 10px;
+    background-color: var(--base);
+}
+
+.baloon-left {
+    border-radius: 0 7px 7px 7px;
+}
+
+.baloon-right {
+    align-self: flex-end;
+    border-radius: 7px 0 7px 7px;
+    background-color: var(--flush-orange);
+}
+
+form.form-group {
+    margin-top: 15px;
+    display: flex;
+    gap: 15px;
+    align-items: flex-start;
+    flex-direction: row;
+}
+
+
+form button {
+    border-radius: 7px;
+    width: 50px !important;
+    height: 50px !important;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--green-vougue);
+}
+
+form button img {
+    color: var(--flush-orange);
+}
+
+textarea {
+    min-height: 100px !important;
+    border-radius: 15px 0 15px 15px;
+    width: 100%;
+}
+
+.content img {
+    width: 100%;
+    justify-self: center;
+}
+
+.end-curhat {
+    margin-top: 15px;
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.btn-outline {
+    font-weight: bolder;
+    color: var(--danger);
+    gap: 8px;
+    width: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 16px;
+    background: #FBFEFE;
+    border: 2px solid var(--danger);
+    border-radius: 8px;
+}
+
+.btn-outline:hover:not(.disable) {
+    background-color: var(--danger);
+    color: var(--polar);
+}
+
+.btn-outline:hover:not(.disable) img {
+    filter: invert(1) grayscale(1) brightness(100%) contrast(100%);
+}
+
+.btn-outline.disable {
+    cursor: default;
+    filter: grayscale(1);
+    opacity: .7;
+}
+
+@media screen and (max-width:1100px) {
+    .content {
+        grid-template-columns: 1.5fr 1fr;
+    }
+}
+
+@media screen and (max-width:800px) {
+    .content {
+        grid-template-columns: 1fr;
+    }
+
+    img#sini-curhat {
+        width: 50%;
+    }
+
+    .cek-curhatan {
+        flex-direction: column;
+    }
+}

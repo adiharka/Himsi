@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>navtop</title>
+
+    <link rel="stylesheet" href="env.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="navtop.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="nav">
+        <div class="nav-mobile">
+            <img src="img/btn-burger.png" alt="" class="nav-burger">
+        </div>
+        <div class="nav-group">
+            <a href="#" class="nav-item active">
+                <span class="nav-text"> Beranda </span>
+                <span class="line"></span>
+            </a>
+            <a href="#" class="nav-item">
+                <span class="nav-text">Profil</span>
+                <span class="line"></span>
+            </a>
+            <a href="#" class="nav-item">
+                <span class="nav-text">CHSI</span>
+                <span class="line"></span>
+            </a>
+            <div class="dropdown nav-item">
+                <button class="dropbtn">Dropdown<img src="img/drop-down.png" /></button>
+                <div class="dropdown-content">
+                    <a href="#">Link 1</a>
+                    <a href="#">Link 2</a>
+                    <a href="#">Link 3</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="content">
+        <!-- <div class="alert alert-info-form">hey</div>
+        <div class="alert alert-danger-form">hey</div>
+        <div class="alert alert-warning-form">hey</div>
+        <div class="alert alert-success-form">hey</div> -->
+        <form action="/form-thanks.html" class="form-feature">
+            <!-- Judul Form -->
+            <h4 class="form-header">(Judul) Pendaftaran Kepengurusan HIMSI 2021</h4>
+            <!-- pilihan alert = info; primary; success; danger -->
+            <div class='alert alert-danger-form'>(alert sunnah) Mohon isi Kolom Wajib</div>
+
+            <!-- Isi Form -->
+            <div class="form-group">
+                <p>(Deskripsi) HIMSI adalah lorem ipsum Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugiat
+                    magnam illum, doloribus esse placeat fuga laboriosam deleniti id nemo molestias.
+                </p>
+            </div>
+            <div class="form-group">
+                <label for="exampleFormInput1">(variasi border merah) Nama*</label>
+                <input type="text" class="form-control" id="exampleFormInput1"
+                    placeholder="Muhammad Snapdragon" data-error="#examplaFormInput1Error">
+                <small class="form-error caption hide" id="examplaFormInput1Error">Here</small>
+            </div>
+            <div class="form-group">
+                <label for="exampleFormControlInput1">Email address*</label>
+                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1">Password</label>
+                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+            </div>
+            <div class="form-group">
+                <label for="exampleFormControlSelect1">Example select</label>
+                <select class="form-control" id="exampleFormControlSelect1">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="exampleFormCheck">Example Checkbox</label>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                    <label class="form-check-label" for="defaultCheck1">
+                        Default checkbox
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck2" disabled>
+                    <label class="form-check-label" for="defaultCheck2">
+                        Disabled checkbox
+                    </label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="exampleFormControlTextarea1">Example textarea</label>
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="exampleFormControlFile1">Example file input</label>
+                <input type="file" class="form-control-file" id="file">
+                <!-- Biar tombolnya cakep pake label dgn class form-control-file-button -->
+                <script src="script.js"></script>
+                <label for="file" class="form-control-file-button" data-multiple-caption="{count} files selected"
+                    multiple>Upload<img src="img/upload.svg" alt=""></label>
+            </div>
+            <!-- Akhir isi form -->
+
+            <!-- Submit Button -->
+            <div class="form-group submit">
+                <button type="submit" class="btn btn-primary" id="form-submit-uhuy">Submit<img src="img/send.svg"
+                        alt=""></button>
+            </div>
+        </form>
+    </div>
+
+
+    <script src="navtop.js"></script>
+    <script src="script.js"></script>
+    <script src="form-mengisi.js"></script>
+
+</body>
+
+</html>
