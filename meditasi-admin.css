@@ -1,0 +1,264 @@
+.content .head {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+button.act {
+    font-style: normal;
+    font-size: 18px;
+    line-height: 22px;
+    padding: 10px;
+    border: 1px solid;
+    border-radius: 3px;
+    border-color: var(--daintree);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
+    transition: all ease .3s;
+}
+
+button.act:hover {
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.75);
+}
+
+button.green {
+    background: var(--success);
+    color: var(--daintree);
+}
+
+button.yellow {
+    background: var(--attention);
+    color: var(--daintree);
+}
+
+button.red {
+    background: var(--danger);
+    color: var(--polar);
+}
+
+.grid-area {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+}
+
+.grid-area .first {
+    display: grid;
+    grid-template-rows: min-content;
+    grid-template-columns: 1fr 1.3fr;
+    grid-template-areas:
+        'title title'
+        'first second';
+}
+
+.grid-area .first .title {
+    grid-area: title;
+    height: fit-content;
+}
+
+.grid-area .first .action {
+    grid-area: first;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.grid-area .first .action button {
+    width: fit-content;
+}
+
+
+.grid-area .first .info {
+    grid-area: second;
+    display: flex;
+    flex-direction: column;
+}
+
+.grid-area .first .info img{
+    width: 100%;
+    height: auto;
+}
+
+
+.grid-area .second {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.grid-area .second .card {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    min-height: 100px;
+    height: 100px;
+    gap: 13px;
+    background-color: var(--polar);
+}
+
+.grid-area .second .card img {
+    width: auto;
+    height: 100px;
+    background-color: transparent;
+}
+
+.grid-area .second .card .card-body {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.grid-area .second .card .card-body h3 img {
+    height: 20px;
+    width: auto;
+}
+
+.grid-area .second .card button {
+    height: 100%;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all ease .3s;
+}
+
+.grid-area .second .card button:hover {
+    filter: brightness(.7);
+}
+
+.mobile {
+    display: none;
+}
+
+.modal .modal-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index:-1;
+}
+textarea {
+    padding: 15px !important;
+    height: 100px !important;
+}
+
+.input-file {
+    width: 100%;
+    padding: 10px;
+    border-radius: 7px;
+    border: 1px solid var(--green-vougue);
+    background-color: var(--eastern-blue);
+}
+
+.modal form {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--base);
+    padding: 20px;
+    border-radius: 7px;
+    border: 2px solid var(--green-vougue);
+}
+
+.row {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+.modal .modal-body hr {
+    height: 3px;
+    border-radius: 5px;
+    width: 95%;
+    background-color: var(--eastern-blue);
+}
+.modal .modal-body .input-group {
+    width: 100%;
+}
+
+.modal button.cancel {
+    background-color: var(--polar);
+    color: var(--danger);
+    border-color: var(--danger);
+    border-radius: 7px;
+    border-width: 2px;
+}
+
+.modal button[type=submit] {
+    background-color: var(--green-vougue);
+    border-color: var(--selective-yellow);
+    color: var(--selective-yellow);
+    font-weight: bold;
+    border-width: 2px;
+    border-radius: 7px;
+}
+
+
+@media screen and (max-width: 1300px) {
+    h3 {
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 30px;
+    }
+
+    p {
+        font-style: normal;
+        font-weight: 300;
+        font-size: 14px;
+        line-height: 17px;
+    }
+
+    .grid-area {
+        gap: 10px;
+        grid-template-columns: 1fr;
+    }
+
+    .grid-area .first {
+        display: grid;
+        grid-template-columns: 5fr 1fr;
+        grid-template-areas: 'title first''second second';
+    }
+
+    .grid-area .first .action {
+        flex-direction: row;
+        gap: 3px;
+    }
+
+    .grid-area .first .info img {
+        width: 100%;
+        height: auto;
+        max-height: 50vh;
+    }
+
+    .grid-area .first .info .img-name {
+        align-self: flex-end;
+    }
+
+    .grid-area .first .action .txt {
+        display: none;
+    }
+
+    .grid-area .second .card {
+        position: relative;
+        padding-right: 50px;
+        border-radius: 7px;
+        box-shadow: 0 4px 5px rgba(0, 0, 0, 0.3);
+        overflow: hidden;
+    }
+
+    .grid-area .second .card .yellow {
+        height: 50%;
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+
+    .grid-area .second .card .red {
+        height: 50%;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+    }
+}

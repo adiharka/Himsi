@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Krisar</title>
+
+      <!-- Main Style -->
+      <link rel="stylesheet" href="env.css" />
+      <link rel="stylesheet" href="style.css" />
+      <link rel="stylesheet" href="navtop.css" />
+      <!-- google font -->
+      <link rel="preconnect" href="https://fonts.gstatic.com" />
+      <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Poppins:wght@400;600;700&display=swap"
+            rel="stylesheet" />
+      <!-- Page Style -->
+      <link rel="stylesheet" href="krisar-index.css" />
+</head>
+
+<body>
+      <div class="nav">
+            <div class="nav-mobile">
+                  <img src="img/btn-burger.png" alt="" class="nav-burger" />
+            </div>
+            <div class="nav-group">
+                  <a href="#" class="nav-item active">
+                        <span class="nav-text"> Beranda </span>
+                        <span class="line"></span>
+                  </a>
+                  <a href="#" class="nav-item">
+                        <span class="nav-text">Profil</span>
+                        <span class="line"></span>
+                  </a>
+                  <a href="#" class="nav-item">
+                        <span class="nav-text">CHSI</span>
+                        <span class="line"></span>
+                  </a>
+                  <div class="dropdown nav-item">
+                        <button class="dropbtn">
+                              Dropdown<img src="img/drop-down.png" />
+                        </button>
+                        <div class="dropdown-content">
+                              <a href="#">Link 1</a>
+                              <a href="#">Link 2</a>
+                              <a href="#">Link 3</a>
+                        </div>
+                  </div>
+            </div>
+      </div>
+
+      <div class="content">
+            <div class="head">
+                  <div class="text">
+                        <h1>Kritik <span id="orange">dan</span> Saran</h1>
+                        <span>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Inventore
+                              ipsam quos laboriosam unde vel at dolorem natus dicta adipisci,
+                              nihil quam ad minus nam quis neque, reprehenderit saepe repellendus
+                              impedit.</span>
+                  </div>
+                  <img src="img/krisar-msg.png" alt="" srcset="" />
+            </div>
+            <div class="list">
+                  <h1>List Bidang (12)</h1>
+                  <div class="list-item">
+                        <div class="thumb-item">
+                              <div class="outline">
+                                    <img src="https://source.unsplash.com/400x400/?nature,water" alt="" />
+                                    <span>PSDM</span>
+                              </div>
+                        </div>
+                        <div class="thumb-item" data-bidang="ristek">
+                              <div class="outline">
+                                    <img src="https://source.unsplash.com/401x401/?nature,water" alt="" />
+                                    <span>RISTEK</span>
+                              </div>
+                        </div>
+                        <div class="thumb-item">
+                              <div class="outline">
+                                    <img src="https://source.unsplash.com/402x402/?nature,water" alt="" />
+                                    <span>SERA</span>
+                              </div>
+                        </div>
+                        <div class="thumb-item">
+                              <div class="outline">
+                                    <img src="https://source.unsplash.com/403x403/?nature,water" alt="" />
+                                    <span>HUBLU</span>
+                              </div>
+                        </div>
+                        <div class="thumb-item">
+                              <div class="outline">
+                                    <img src="https://source.unsplash.com/404x404/?nature,water" alt="" />
+                                    <span>AKADEMIK</span>
+                              </div>
+                        </div>
+                        <div class="thumb-item">
+                              <div class="outline">
+                                    <img src="https://source.unsplash.com/405x405/?nature,water" alt="" />
+                                    <span>KESTARI</span>
+                              </div>
+                        </div>
+                        <div class="thumb-item">
+                              <div class="outline">
+                                    <img src="https://source.unsplash.com/406x406/?nature,water" alt="" />
+                                    <span>BPH</span>
+                              </div>
+                        </div>
+                        <div class="thumb-item">
+                              <div class="outline">
+                                    <img src="https://source.unsplash.com/407x407/?nature,water" alt="" />
+                                    <span>MEDIA</span>
+                              </div>
+                        </div>
+                  </div>
+            </div>
+      </div>
+      <div class="modal" id="info-bidang">
+            <div class="close-overlay"></div>
+            <div class="modal-content kritik-content">
+                  <h1 id="nama-bidang">SERA</h1>
+
+            </div>
+      </div>
+      <div class="modal" id="kritik-saran">
+            <div class="close-overlay"></div>
+            <div class="modal-content">
+                  <h1>Kritik dan Saran untuk</h1>
+                  <h1 id="kritik-bidang"></h1>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi commodi expedita illum totam aperiam
+                        sunt neque ipsam quasi delectus iste, fugiat, aliquid inventore voluptate laudantium, cumque
+                        maiores voluptas iusto nostrum sit. Minima porro alias ratione aliquam fugit aperiam ullam a
+                        distinctio enim, eum, culpa excepturi in officiis sed magni quos vero soluta animi dolore
+                        voluptatum rerum assumenda blanditiis voluptatibus? Tempore odit aspernatur praesentium incidunt
+                        ratione unde, magnam obcaecati voluptatibus mollitia tempora aperiam molestiae. Eaque,
+                        temporibus nemo, dolorem cum odio aliquid itaque, fugiat suscipit ex asperiores sint officia
+                        impedit. Nostrum nisi maiores distinctio? Non officia laborum enim recusandae in excepturi
+                        laudantium?</p>
+            </div>
+      </div>
+      <template class="kritik" style="display: none;">
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum aut ullam non facere nobis
+                  eum consequatur est distinctio facilis rerum!</p>
+            <div class="info">
+                  <span class="more">Click for more</span>
+                  <span class="date">2021-07-19 12:13 WIB</span>
+            </div>
+      </template>
+      <script>
+            const data = {
+                  ristek: [{
+                              kritik: 'lorem',
+                              tanggal: '123123123'
+                        },
+                        {
+                              kritik: 'test',
+                              tanggal: '89568796'
+                        }
+                  ]
+            }
+            const templatekritik = document.querySelector('template.kritik');
+            const list = document.querySelectorAll('.thumb-item');
+            const modal = document.querySelector('.modal#info-bidang');
+            const modalform = document.querySelector('.modal#kritik-saran');
+            let dataselected = {};
+            list.forEach(item => {
+                  item.addEventListener('click', () => {
+                        modal.classList.add('active');
+                        modal.querySelector('.modal-content').scrollTop = 0
+                        document.querySelector('body').style.overflow = 'hidden';
+                        document.querySelectorAll('.kritik').forEach(el => {
+                              el.remove();
+                        })
+                        modal.querySelector('#nama-bidang').innerHTML = 'HIMSI';
+                        switch (item.dataset.bidang) {
+                              case 'ristek':
+                                    modal.querySelector('#nama-bidang').innerHTML = 'RISTEK';
+                                    console.log('ristek');
+                                    data.ristek.forEach(kritik => {
+                                          var a = document.createElement('div');
+                                          a.classList.add('kritik');
+                                          a.innerHTML = templatekritik.innerHTML;
+                                          console.log(a);
+                                          a.style.display = 'flex';
+                                          a.querySelector('p').innerHTML = kritik
+                                                .kritik
+                                          a.querySelector('.date').innerHTML =
+                                                kritik.tanggal
+                                          a.addEventListener('click', () => {
+                                                setTimeout(() => {
+                                                      modal.classList
+                                                            .remove(
+                                                                  'active'
+                                                                  );
+                                                      modalform
+                                                            .classList
+                                                            .add(
+                                                                  'active');
+                                                      modalform
+                                                            .querySelector(
+                                                                  '#kritik-bidang'
+                                                                  )
+                                                            .innerHTML =
+                                                            dataselected
+                                                            .bidang;
+                                                }, 500)
+                                          })
+                                          modal.querySelector('.modal-content')
+                                                .append(a);
+                                    });
+                                    break;
+
+                              default:
+                                    break;
+                        }
+                  })
+            });
+            document.querySelector('#info-bidang .close-overlay').addEventListener('click', (e) => {
+                  e.target.parentElement.classList.remove('active')
+                  document.querySelector('body').style.overflowX = 'scroll';
+            })
+            document.querySelector('#kritik-saran .close-overlay').addEventListener('click', (e) => {
+                  e.target.parentElement.classList.remove('active')
+                  modal.classList.add('active');
+            })
+      </script>
+</body>
+
+</html>

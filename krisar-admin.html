@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Krisar</title>
+
+    <!-- Main Style -->
+    <link rel="stylesheet" href="env.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="navtop.css" />
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Poppins:wght@400;600;700&display=swap"
+        rel="stylesheet" />
+    <!-- Page Style -->
+    <link rel="stylesheet" href="krisar-admin.css" />
+</head>
+
+<body>
+    <div class="nav">
+        <div class="nav-mobile">
+            <img src="img/btn-burger.png" alt="" class="nav-burger" />
+        </div>
+        <div class="nav-group">
+            <a href="#" class="nav-item active">
+                <span class="nav-text"> Beranda </span>
+                <span class="line"></span>
+            </a>
+            <a href="#" class="nav-item">
+                <span class="nav-text">Profil</span>
+                <span class="line"></span>
+            </a>
+            <a href="#" class="nav-item">
+                <span class="nav-text">CHSI</span>
+                <span class="line"></span>
+            </a>
+            <div class="dropdown nav-item">
+                <button class="dropbtn">
+                    Dropdown<img src="img/drop-down.png" />
+                </button>
+                <div class="dropdown-content">
+                    <a href="#">Link 1</a>
+                    <a href="#">Link 2</a>
+                    <a href="#">Link 3</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="content">
+        <h1>Kritik <span id="orange">dan</span> Saran</h1>
+        <div class="list">
+            <div class="kritik">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt tempora assumenda quasi porro numquam
+                    saepe fugiat totam vel eaque itaque?</p>
+                <div class="info">
+                    <span class="more caption">Click for more</span>
+                    <span class="date caption">2021-07-19 12:13 WIB</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+    <script>
+        const kritik = document.querySelectorAll('.kritik');
+        const modal = document.querySelector('.modal#kritik-saran');
+        kritik.forEach(kr => {
+            kr.addEventListener('click', () => {
+                modal.classList.add('active');
+            })
+            var a = kr.querySelector('p').innerText.split(' ').slice(0, 10).join(' ') + '...';
+            kr.querySelector('p').innerHTML = a;
+        });
+
+        modal.querySelector('.close-overlay').addEventListener('click', () => {
+            modal.classList.remove('active');
+        })
+    </script>
+</body>
+
+</html>
