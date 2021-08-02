@@ -1,0 +1,127 @@
+.content h1 {
+    color: var(--daintree);
+}
+
+.content h1 span#orange {
+    color: var(--flush-orange);
+}
+
+.list {
+    display: flex;
+    flex-direction: row;
+    row-gap: 25px;
+    column-gap: 5%;
+    flex-wrap: wrap;
+}
+
+.kritik {
+    width: 30%;
+    height: fit-content;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    color: var(--daintree);
+    border-radius: 25px;
+    border: 1px solid var(--eastern-blue);
+    transition: all ease .3s;
+}
+
+.kritik:hover {
+    box-shadow: 0 0 10px black;
+    cursor: pointer;
+}
+
+.kritik p {
+    text-align: justify;
+}
+
+.kritik .info {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.kritik .info>* {
+    color: var(--eastern-blue);
+}
+
+.modal {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0);
+    backdrop-filter: blur(5px);
+    transform: translateX(100%);
+}
+
+.modal .close-overlay {
+    position: absolute;
+    z-index: -1;
+    background-color: rgba(255, 0, 0, 0);
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.modal .modal-content {
+    position: relative;
+    height: 100%;
+    width: 40%;
+    background-color: var(--polar);
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    padding: 25px;
+    gap: 5px;
+    transition: all ease 2s;
+    transform: translateX(200%);
+    border: 3px solid var(--green-vougue);
+    box-shadow: 0px 6px 30px rgba(0, 0, 0, 0.25);
+}
+
+.modal .modal-content::-webkit-scrollbar-thumb {
+    background: black;
+}
+
+.modal .modal-content::-webkit-scrollbar {
+    width: 5px;
+}
+
+.modal .modal-content p {
+    text-align: justify;
+}
+
+.modal.active {
+    transform: translateX(0px);
+}
+
+
+.modal.active .modal-content {
+    transform: translateX(0);
+}
+
+@media screen and (max-width: 1100px) {
+    .kritik {
+        width: 45%;
+    }
+
+    .kritik .info {
+        flex-direction: column-reverse;
+    }
+
+    .modal .modal-content {
+        width: 60%;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .modal .modal-content {
+        width: 80%;
+    }
+}

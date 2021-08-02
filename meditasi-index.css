@@ -1,0 +1,199 @@
+.content {
+    padding: 0 !important;
+}
+
+.nav {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    background: #023047b5 !important;
+    backdrop-filter: blur(15px);
+    z-index: 1;
+}
+
+#frame1 {
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('./img/main-bg.jpg');
+}
+
+.meditasi {
+    padding: 100px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-position: center !important;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+    width: 100%;
+    min-height: 100vh;
+}
+
+.meditasi .title {
+    font-size: 102px;
+    line-height: 128px;
+}
+
+.meditasi p.desc {
+    margin-top: 25px;
+    margin-bottom: 50px;
+    max-width: 50%;
+    width: fit-content;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 22px;
+    text-align: center;
+    color: var(--base);
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(15px);
+    border-radius: 15px;
+}
+
+.great-vibes {
+    font-family: 'Great Vibes', cursive;
+    font-style: normal;
+    font-weight: normal;
+
+    color: var(--base);
+}
+
+.meditasi .card {
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    padding: 25px;
+    gap: 25px;
+    align-items: center;
+    justify-content: flex-start;
+    background: rgba(251, 254, 254, 0.8);
+    backdrop-filter: blur(30px);
+    border-radius: 15px;
+    margin: 20px 0;
+    transition: all ease .3s;
+}
+
+.meditasi .card:hover {
+    backdrop-filter: blur(60px);
+    background: rgba(0, 0, 0, 0.6);
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+.meditasi .card:hover .card-body>*:not(span) {
+    color: white !important;
+}
+
+.meditasi .card img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: transparent;
+}
+
+.meditasi .card .card-body {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+}
+
+.meditasi .card .card-body h3.title {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 34px;
+    line-height: 51px;
+    /* identical to box height */
+
+
+    color: #000000;
+}
+
+.meditasi .card .card-body h3.title img {
+    height: 25px;
+    width: auto;
+}
+
+.meditasi .card .card-body p.short-desc {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 22px;
+    color: #000000;
+}
+
+.meditasi .card .card-body span.link {
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 20px;
+    color: var(--eastern-blue);
+}
+
+@media screen and (max-width: 800px) {
+    .meditasi .title {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 44px;
+        line-height: 55px;
+        /* identical to box height */
+        text-align: center;
+    }
+
+    .meditasi p.desc {
+        max-width: 70%;
+        font-style: normal;
+        font-weight: 300;
+        font-size: 14px;
+        line-height: 17px;
+        text-align: center;
+
+        /* Text/Polar */
+
+        color: #FBFEFE;
+    }
+
+    .meditasi .card {
+        width: 90%;
+        height: 100px;
+        padding: 0;
+        overflow: hidden;
+    }
+
+    .meditasi .card img {
+        width: 100px;
+        height: 100px;
+        border-radius: 0;
+    }
+
+    .meditasi .card .card-body span.link {
+        display: none;
+    }
+
+    .meditasi .card .card-body h3.title {
+
+        font-style: normal;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 30px;
+        /* identical to box height */
+
+        text-align: center;
+
+        color: #111111;
+    }
+
+    .meditasi .card .card-body h3.title img {
+        height: 15px;
+    }
+
+    .meditasi .card .card-body p.short-desc {
+        font-style: normal;
+        font-weight: 300;
+        font-size: 14px;
+        line-height: 17px;
+
+        color: #000000;
+    }
+}
