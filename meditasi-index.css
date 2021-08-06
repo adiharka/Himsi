@@ -13,7 +13,7 @@
 }
 
 #frame1 {
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('./img/MacOS-3D-4K-Light.jpg');
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('./img/main-bg.jpg');
 }
 
 .meditasi {
@@ -66,7 +66,7 @@
     padding: 25px;
     gap: 25px;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     background: rgba(251, 254, 254, 0.8);
     backdrop-filter: blur(30px);
     border-radius: 15px;
@@ -78,6 +78,7 @@
     backdrop-filter: blur(60px);
     background: rgba(0, 0, 0, 0.6);
     transform: scale(1.05);
+    cursor: pointer;
 }
 
 .meditasi .card:hover .card-body>*:not(span) {
