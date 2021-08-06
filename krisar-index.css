@@ -178,6 +178,7 @@ h1 {
 textarea {
   padding: 15px;
   height: 50vh;
+  width: 100%;
 }
 
 .modal-content.kritik-content {
@@ -232,7 +233,6 @@ textarea {
   height: fit-content;
 }
 
-
 @media screen and (max-width: 1100px) {
   .modal {
     justify-content: center;
@@ -257,7 +257,16 @@ textarea {
   .modal .modal-content {
     width: 90%;
   }
+
   .list .list-item {
     grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    grid-template-rows: 150px;
+  }
+
+  .list .list-item .thumb-item .outline img,
+  .list .list-item .thumb-item .outline {
+    width: 150px;
+    height: 150px;
   }
 }
